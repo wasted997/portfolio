@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essam Ahmad | Customer Support, Technical Support &amp; E-Commerce Specialist</title>
+  <meta name="description" content="Online CV and portfolio of Essam Ahmad Mostafa Mohammed, remote Customer Support, Technical Support, Sales Support, and Appointment Setting Specialist with 4+ years of global experience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e3a8a',
+              900: '#172554',
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    .glass-nav {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .role-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .role-card:hover {
+      transform: translateY(-2px);
+    }
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeSlideUp 0.28s ease-out forwards;
+    }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: #ffffff !important; color: #0f172a !important; }
+      section { break-inside: avoid; padding-top: 12px !important; padding-bottom: 12px !important; }
+      .role-card { box-shadow: none !important; border: 1px solid #cbd5e1 !important; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 antialiased selection:bg-brand-600 selection:text-white transition-colors duration-200">
+
+  <!-- Toast Notification -->
+  <div id="toast" role="status" aria-live="polite" class="no-print fixed bottom-5 right-5 z-50 pointer-events-none opacity-0 translate-y-3 transition-all duration-300">
+    <div class="flex items-center gap-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-4 py-3 rounded-xl shadow-lg text-sm font-medium">
+      <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 dark:text-emerald-600 shrink-0"></i>
+      <span id="toast-message">Copied to clipboard</span>
+    </div>
+  </div>
+
+  <!-- Share Links Modal -->
+  <div id="share-modal" class="no-print fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/60 backdrop-blur-sm p-4" role="dialog" aria-modal="true" aria-labelledby="share-modal-title">
+    <div class="w-full max-w-md rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl p-6 animate-fade-in">
+      <div class="flex items-start justify-between gap-4 mb-4">
+        <div>
+          <h3 id="share-modal-title" class="text-lg font-bold text-slate-900 dark:text-white">Share Dedicated CV Link</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Each dedicated link locks to that specific version and hides the track switcher from recruiters.</p>
+        </div>
+        <button id="close-share-modal" type="button" aria-label="Close modal" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="space-y-3">
+        <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center justify-between gap-2 mb-1.5">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-600 dark:text-brand-400">CX &amp; Technical Support Link</span>
+            <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400">#cx-only</span>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-300 mb-2.5">Shows only Customer Support, Tier 2 Technical Support, and E-Commerce experience.</p>
+          <button id="copy-cx-link-btn" type="button" class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold transition-colors">
+            <i data-lucide="link" class="w-3.5 h-3.5"></i>
+            <span>Copy CX &amp; Tech Support Link</span>
+          </button>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center justify-between gap-2 mb-1.5">
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Sales &amp; Appointment Setting Link</span>
+            <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400">#sales-only</span>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-300 mb-2.5">Shows only Sales Support, Consultative Sales, Outbound/Inbound Calls, and Appointment Setting.</p>
+          <button id="copy-sales-link-btn" type="button" class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 dark:bg-indigo-600 dark:hover:bg-indigo-700 text-white text-xs font-semibold transition-colors">
+            <i data-lucide="link" class="w-3.5 h-3.5"></i>
+            <span>Copy Sales &amp; Setter Link</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navigation -->
+  <header class="no-print sticky top-0 z-40 glass-nav bg-white/85 dark:bg-slate-950/85 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
+      <a href="#top" class="flex items-center gap-2.5 group shrink-0">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-700 to-brand-500 text-white font-bold text-sm flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+          EA
+        </div>
+        <div class="leading-tight">
+          <div class="font-bold text-slate-900 dark:text-white text-sm sm:text-base tracking-tight">Essam Ahmad</div>
+          <div id="nav-subtitle" class="text-[11px] text-slate-500 dark:text-slate-400 hidden sm:block">Customer &amp; Tech Support</div>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-0.5 text-sm font-medium text-slate-600 dark:text-slate-300 whitespace-nowrap">
+        <a href="#about" class="px-3 py-2 rounded-lg hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors">About</a>
+        <a href="#experience" class="px-3 py-2 rounded-lg hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors">Experience</a>
+        <a href="#skills" class="px-3 py-2 rounded-lg hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors">Skills</a>
+        <a href="#education" class="px-3 py-2 rounded-lg hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors">Education</a>
+        <a href="#contact" class="px-3 py-2 rounded-lg hover:text-brand-600 dark:hover:text-brand-400 hover:bg-slate-100 dark:hover:bg-slate-800/70 transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <!-- Track Switcher (auto-hidden when opened via #cx-only or #sales-only) -->
+        <div id="track-switcher-wrap" class="hidden sm:inline-flex items-center p-1 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-xs font-semibold whitespace-nowrap shrink-0">
+          <button type="button" data-track="cx" class="track-btn whitespace-nowrap px-2.5 py-1.5 rounded-lg transition-colors bg-white dark:bg-slate-800 text-brand-700 dark:text-brand-300 shadow-sm">CX &amp; Tech</button>
+          <button type="button" data-track="sales" class="track-btn whitespace-nowrap px-2.5 py-1.5 rounded-lg transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">Sales &amp; Setter</button>
+        </div>
+
+        <button id="theme-toggle" type="button" aria-label="Toggle dark mode" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <i data-lucide="moon" id="icon-moon" class="w-4 h-4"></i>
+          <i data-lucide="sun" id="icon-sun" class="w-4 h-4 hidden"></i>
+        </button>
+        <button id="print-btn" type="button" class="hidden md:inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium shadow-sm transition-colors whitespace-nowrap shrink-0">
+          <i data-lucide="printer" class="w-4 h-4"></i>
+          <span>Print / PDF</span>
+        </button>
+        <button id="mobile-menu-btn" type="button" aria-label="Open menu" class="lg:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+          <i data-lucide="menu" class="w-4 h-4"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 px-4 py-3 space-y-1">
+      <div id="mobile-track-switcher" class="pb-2 mb-2 border-b border-slate-100 dark:border-slate-800">
+        <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 mb-1.5 px-1">CV Version</div>
+        <div class="grid grid-cols-2 gap-1.5 p-1 rounded-xl bg-slate-100 dark:bg-slate-900 text-xs font-semibold">
+          <button type="button" data-track="cx" class="track-btn py-2 rounded-lg transition-colors bg-white dark:bg-slate-800 text-brand-700 dark:text-brand-300 shadow-sm">CX &amp; Tech</button>
+          <button type="button" data-track="sales" class="track-btn py-2 rounded-lg transition-colors text-slate-600 dark:text-slate-400">Sales &amp; Setter</button>
+        </div>
+      </div>
+      <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">About</a>
+      <a href="#experience" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Experience</a>
+      <a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Skills &amp; Tools</a>
+      <a href="#education" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Education</a>
+      <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800">Contact</a>
+      <button id="mobile-print-btn" type="button" class="w-full mt-2 flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-brand-600 text-white text-sm font-medium">
+        <i data-lucide="printer" class="w-4 h-4"></i>
+        <span>Print / Save as PDF</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top" class="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-10 sm:pt-14 pb-10">
+      <div class="relative overflow-hidden rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm p-6 sm:p-10">
+        <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-brand-500/10 blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-56 h-56 rounded-full bg-indigo-500/10 blur-3xl pointer-events-none"></div>
+
+        <div class="relative flex flex-col md:flex-row md:items-start justify-between gap-6">
+          <div class="flex-1 space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/60 text-emerald-700 dark:text-emerald-300 text-xs font-semibold">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span id="hero-badge">Available for Remote Roles | Egypt-Based</span>
+            </div>
+
+            <div>
+              <h1 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                Essam Ahmad Mostafa Mohammed
+              </h1>
+              <p id="hero-headline" class="mt-2.5 text-base sm:text-lg font-semibold text-brand-700 dark:text-brand-400">
+                <!-- Rendered by JS -->
+              </p>
+            </div>
+
+            <p id="hero-summary" class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
+              <!-- Rendered by JS -->
+            </p>
+
+            <!-- Quick Contact & Action Buttons -->
+            <div class="no-print pt-2 flex flex-wrap items-center gap-2.5">
+              <a href="mailto:essamahmad183@gmail.com" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold shadow-sm transition-colors">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                <span>Email Me</span>
+              </a>
+              <a href="https://www.linkedin.com/in/essam-ahmad-cs" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white text-sm font-semibold shadow-sm transition-colors">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                <span>LinkedIn</span>
+              </a>
+              <button type="button" data-copy="essamahmad183@gmail.com" data-label="Email address copied!" class="copy-trigger inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-medium transition-colors">
+                <i data-lucide="copy" class="w-4 h-4 text-slate-400"></i>
+                <span>Copy Email</span>
+              </button>
+              <button id="share-btn" type="button" class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/60 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 text-sm font-medium transition-colors">
+                <i data-lucide="share-2" class="w-4 h-4 text-slate-400"></i>
+                <span>Share Link</span>
+              </button>
+            </div>
+
+            <!-- Metadata Strip -->
+            <div class="pt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs sm:text-sm text-slate-500 dark:text-slate-400 border-t border-slate-100 dark:border-slate-800/80">
+              <span class="inline-flex items-center gap-1.5">
+                <i data-lucide="map-pin" class="w-4 h-4 text-brand-600 dark:text-brand-400"></i>
+                Egypt (Remote)
+              </span>
+              <span class="inline-flex items-center gap-1.5">
+                <i data-lucide="phone" class="w-4 h-4 text-brand-600 dark:text-brand-400"></i>
+                +20 109 040 0876
+              </span>
+              <span class="inline-flex items-center gap-1.5">
+                <i data-lucide="mail" class="w-4 h-4 text-brand-600 dark:text-brand-400"></i>
+                essamahmad183@gmail.com
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Grounded Highlight Cards -->
+        <div id="highlights-grid" class="relative mt-8 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-8">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+        <div>
+          <div class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Career Track</div>
+          <h2 id="exp-section-title" class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1">Professional Experience</h2>
+        </div>
+
+        <!-- Experience Domain Filters -->
+        <div id="exp-filters" class="no-print flex flex-wrap gap-2" role="tablist" aria-label="Filter experience by domain">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+
+      <div id="experience-list" class="space-y-4">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- Skills & Tools Section -->
+    <section id="skills" class="py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- Core Skills (7 cols) -->
+        <div class="lg:col-span-7 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
+            <div>
+              <div class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Capabilities</div>
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-0.5">Core Skills</h2>
+            </div>
+            <div id="skill-filters" class="no-print flex flex-wrap gap-1.5">
+              <!-- Rendered by JS -->
+            </div>
+          </div>
+
+          <div id="skills-grid" class="flex flex-wrap gap-2.5">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+
+        <!-- Tools & Platforms (5 cols) -->
+        <div class="lg:col-span-5 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm p-6 sm:p-8">
+          <div class="mb-5">
+            <div class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Software Stack</div>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mt-0.5">Tools &amp; Platforms</h2>
+          </div>
+
+          <div id="tools-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Languages & Education Section -->
+    <section id="education" class="py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Languages -->
+        <div class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-2xl bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 flex items-center justify-center">
+              <i data-lucide="languages" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Communication</div>
+              <h2 class="text-xl font-bold text-slate-900 dark:text-white">Languages</h2>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 flex items-center justify-between gap-4">
+              <div>
+                <div class="font-semibold text-slate-900 dark:text-white">Arabic</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Native Speaker</div>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-300">Native</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 flex items-center justify-between gap-4">
+              <div>
+                <div class="font-semibold text-slate-900 dark:text-white">English</div>
+                <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Professional Working Proficiency</div>
+              </div>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-brand-100 dark:bg-brand-900/60 text-brand-700 dark:text-brand-300">Professional</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 shadow-sm p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-10 h-10 rounded-2xl bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 flex items-center justify-center">
+                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-brand-400">Academic Background</div>
+                <h2 class="text-xl font-bold text-slate-900 dark:text-white">Education</h2>
+              </div>
+            </div>
+            <div class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <h3 class="font-bold text-slate-900 dark:text-white text-base sm:text-lg">Graduate Degree (Bachelor's Degree)</h3>
+              <p class="text-brand-700 dark:text-brand-400 font-medium text-sm mt-1">Al-Azhar University, Egypt</p>
+            </div>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 flex items-center gap-2">
+            <i data-lucide="globe" class="w-4 h-4 text-brand-500 shrink-0"></i>
+            <span id="edu-footer-note">Experienced collaborating with international teams and clients across multiple time zones.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="pt-8">
+      <div class="rounded-3xl bg-gradient-to-br from-slate-900 via-brand-900 to-slate-900 text-white p-7 sm:p-10 shadow-md">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="max-w-xl">
+            <div class="text-xs font-bold uppercase tracking-widest text-brand-200">Get in Touch</div>
+            <h2 id="contact-heading" class="text-2xl sm:text-3xl font-bold mt-1.5">Ready to support your customers and operations?</h2>
+            <p id="contact-desc" class="mt-2.5 text-slate-300 text-sm sm:text-base leading-relaxed">
+              Reach out directly via email, phone, WhatsApp, or LinkedIn for full-time remote roles, technical support positions, or freelance e-commerce and customer experience projects.
+            </p>
+          </div>
+          <div class="no-print flex flex-col sm:flex-row md:flex-col gap-2.5 shrink-0">
+            <a href="mailto:essamahmad183@gmail.com" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white text-slate-900 hover:bg-brand-50 text-sm font-bold shadow-sm transition-colors">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-600"></i>
+              <span>essamahmad183@gmail.com</span>
+            </a>
+            <div class="grid grid-cols-2 gap-2.5">
+              <a href="https://wa.me/201090400876" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-white text-sm font-semibold transition-colors">
+                <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                <span>WhatsApp</span>
+              </a>
+              <button type="button" data-copy="+20 109 040 0876" data-label="Phone number copied!" class="copy-trigger inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-white text-sm font-semibold transition-colors">
+                <i data-lucide="phone" class="w-4 h-4 text-brand-200"></i>
+                <span>Copy Phone</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400">
+          <span>Essam Ahmad Mostafa Mohammed | Egypt (Remote)</span>
+          <a href="https://www.linkedin.com/in/essam-ahmad-cs" target="_blank" rel="noopener noreferrer" class="text-brand-200 hover:text-white underline underline-offset-4 transition-colors">
+            linkedin.com/in/essam-ahmad-cs
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const PROFILES = {
+      cx: {
+        pageTitle: 'Essam Ahmad | Customer Support, Technical Support & E-Commerce Specialist',
+        navSubtitle: 'Customer & Tech Support',
+        badge: 'Available for Remote Roles | Egypt-Based',
+        headlineParts: ['Customer Support', 'Technical Support', 'E-Commerce & Customer Experience'],
+        summaryHtml: 'Customer Support and Technical Support Professional with <strong class="text-slate-900 dark:text-white font-semibold">4+ years of experience</strong> across global travel, ticketing, hospitality, telecommunications, e-commerce, and digital platforms. Experienced in high-volume phone, live chat, and email support, with hands-on expertise in technical troubleshooting, issue diagnosis, reservations, order tracking, billing and payments, returns &amp; refunds, escalations, and complaint resolution. Proficient in <strong class="text-slate-900 dark:text-white font-semibold">Zendesk, Salesforce, Shopify, and Twilio</strong>, with a strong focus on root-cause investigation, clear customer guidance, accurate case documentation, cross-functional escalation, and identifying recurring issues that can improve the customer experience.',
+        highlights: [
+          { label: 'Experience', value: '4+ Years', sub: 'Global Support & CX' },
+          { label: 'Channels', value: 'Omnichannel', sub: 'Phone, Live Chat & Email' },
+          { label: 'Core Stack', value: '4+ CRMs', sub: 'Zendesk, Salesforce, Shopify' },
+          { label: 'Languages', value: 'Bilingual', sub: 'Arabic Native & English Pro' }
+        ],
+        expTitle: 'Professional Experience',
+        expFilters: [
+          { id: 'all', label: 'All Roles (7)' },
+          { id: 'support', label: 'Customer Support' },
+          { id: 'travel', label: 'Travel & Hospitality' },
+          { id: 'tech', label: 'Technical Support' },
+          { id: 'ecommerce', label: 'E-Commerce & VA' }
+        ],
+        experience: [
+          {
+            id: 'stubhub',
+            role: 'Customer Service Representative',
+            company: 'Alorica - StubHub',
+            badge: 'Ticketing & Events',
+            categories: ['support'],
+            bullets: [
+              'Support customers with ticket purchases, transfers, delayed delivery, event-related issues, payments, refunds, cancellations, and resale concerns.',
+              'Handle high-volume contacts, investigate account and order details, document cases accurately, coordinate escalations and follow-ups, and maintain ownership through resolution.'
+            ]
+          },
+          {
+            id: 'asap-tickets',
+            role: 'Travel Consultant',
+            company: 'Dynino - ASAP Tickets',
+            badge: 'Travel & Sales',
+            categories: ['support', 'travel'],
+            bullets: [
+              'Assisted customers with flight and hotel options, travel inquiries, booking decisions, and post-booking support in a sales-driven customer service environment.',
+              'Balanced customer needs with commercial goals by explaining options clearly, addressing objections, and guiding customers seamlessly through the booking process.'
+            ]
+          },
+          {
+            id: 'accor',
+            role: 'Travel Advisor',
+            company: 'Accor',
+            badge: 'Hospitality',
+            categories: ['support', 'travel'],
+            bullets: [
+              'Supported international hotel guests with reservation inquiries, booking assistance, modifications, cancellations, hotel information, and customer concerns across voice and digital channels.'
+            ]
+          },
+          {
+            id: 'vrbo',
+            role: 'Customer Service Representative',
+            company: 'Concentrix - Vrbo / Expedia Group',
+            badge: 'Travel & Partner Support',
+            categories: ['support', 'travel'],
+            bullets: [
+              'Supported travelers and property partners with reservations, pricing, fees, policies, booking changes, cancellations, guest concerns, payouts, calendars, and listing-related questions.',
+              'Used CRM and support platforms to investigate cases, document interactions, coordinate follow-ups, and resolve complex customer and partner issues.'
+            ]
+          },
+          {
+            id: 'optimum',
+            role: 'Tier 2 Technical Support',
+            company: 'Intelcia - Optimum',
+            badge: 'Telecom & Tier 2 Tech',
+            categories: ['support', 'tech'],
+            bullets: [
+              'Provided advanced troubleshooting for internet, TV, and phone services, diagnosing technical issues and guiding customers through structured resolution steps.',
+              'Handled billing and service concerns, documented technical cases, identified when escalation was required, and routed unresolved issues through the appropriate support channels.'
+            ]
+          },
+          {
+            id: 'shopify-upwork',
+            role: 'E-Commerce Support & Store Operations Specialist',
+            company: 'Shopify & Upwork (Own Store & Multiple Clients)',
+            badge: 'E-Commerce & Operations',
+            categories: ['support', 'ecommerce'],
+            bullets: [
+              'Managed end-to-end e-commerce store operations and customer support for a personal Shopify store as well as multiple international clients on Upwork.',
+              'Handled order tracking, returns and exchanges, payment processing, refunds, cancellations, and post-purchase inquiries to ensure seamless order fulfillment and high customer satisfaction.'
+            ]
+          },
+          {
+            id: 'alifbee',
+            role: 'Virtual Assistant - Recruitment Outreach',
+            company: 'AlifBee Ltd',
+            badge: 'Remote Operations & VA',
+            categories: ['ecommerce'],
+            bullets: [
+              'Managed professional email outreach, agency follow-ups, meeting coordination, and an organized recruitment tracker for remote hiring projects.'
+            ]
+          }
+        ],
+        skillFilters: [
+          { id: 'all', label: 'All' },
+          { id: 'support', label: 'Support' },
+          { id: 'technical', label: 'Technical' },
+          { id: 'operations', label: 'Orders & Ops' }
+        ],
+        skills: [
+          { name: 'Customer Support', cat: 'support' },
+          { name: 'Phone, Chat & Email', cat: 'support' },
+          { name: 'Escalation Handling', cat: 'support' },
+          { name: 'Complaint Resolution', cat: 'support' },
+          { name: 'Customer Guidance', cat: 'support' },
+          { name: 'Cross-Team Collaboration', cat: 'support' },
+          { name: 'Technical Troubleshooting', cat: 'technical' },
+          { name: 'Issue Diagnosis', cat: 'technical' },
+          { name: 'Tier 2 Support', cat: 'technical' },
+          { name: 'Root-Cause Investigation', cat: 'technical' },
+          { name: 'CRM / Case Management', cat: 'operations' },
+          { name: 'Process Improvement', cat: 'operations' },
+          { name: 'Billing & Payments', cat: 'operations' },
+          { name: 'Returns & Refunds', cat: 'operations' },
+          { name: 'Order Tracking & Bookings', cat: 'operations' },
+          { name: 'Documentation & Follow-up', cat: 'operations' }
+        ],
+        tools: [
+          { name: 'Zendesk', icon: 'headphones' },
+          { name: 'Salesforce', icon: 'cloud' },
+          { name: 'Shopify', icon: 'shopping-bag' },
+          { name: 'Twilio', icon: 'phone-call' },
+          { name: 'Upwork', icon: 'briefcase' },
+          { name: 'CRM & Ticketing Systems', icon: 'layers' },
+          { name: 'Google Workspace', icon: 'layout-grid' },
+          { name: 'Microsoft Office', icon: 'file-text' }
+        ],
+        eduNote: 'Experienced collaborating with international teams and clients across multiple time zones.',
+        contactHeading: 'Ready to support your customers and operations?',
+        contactDesc: 'Reach out directly via email, phone, WhatsApp, or LinkedIn for full-time remote roles, technical support positions, or freelance e-commerce and customer experience projects.'
+      },
+
+      sales: {
+        pageTitle: 'Essam Ahmad | Customer Service, Sales Support & Appointment Setting',
+        navSubtitle: 'Sales & Appointment Setting',
+        badge: 'Available for Remote Sales & Setter Roles | Egypt-Based',
+        headlineParts: ['Customer Service', 'Sales Support', 'Appointment Setting'],
+        summaryHtml: 'Customer-facing professional with <strong class="text-slate-900 dark:text-white font-semibold">4+ years of experience</strong> across travel, hospitality, ticketing, telecommunications, and remote support. Experienced in <strong class="text-slate-900 dark:text-white font-semibold">high-volume phone communication, consultative sales, objection handling, customer follow-up, reservations, and CRM documentation</strong>. Comfortable speaking with international and U.S. customers, understanding needs, presenting relevant options, maintaining professional follow-up, and working toward commercial and service targets.',
+        highlights: [
+          { label: 'Experience', value: '4+ Years', sub: 'International & U.S. Customers' },
+          { label: 'Communication', value: 'Phone First', sub: 'Inbound & Outbound Calls' },
+          { label: 'Sales Focus', value: 'Consultative', sub: 'Discovery & Objection Handling' },
+          { label: 'CRM & Tracking', value: 'Organized', sub: 'Salesforce, Twilio & Follow-up' }
+        ],
+        expTitle: 'Relevant Experience',
+        expFilters: [
+          { id: 'all', label: 'All Roles (6)' },
+          { id: 'sales', label: 'Sales & Booking' },
+          { id: 'outreach', label: 'Outreach & Follow-up' },
+          { id: 'phone', label: 'High-Volume Phone' }
+        ],
+        experience: [
+          {
+            id: 'asap-tickets-sales',
+            role: 'Travel Consultant',
+            company: 'Dynino - ASAP Tickets',
+            badge: 'Consultative Sales',
+            categories: ['sales', 'phone'],
+            bullets: [
+              'Worked in a sales-driven customer service environment, speaking with customers about travel needs and recommending suitable flight and hotel options.',
+              'Explained options clearly, addressed objections, guided customers through booking decisions, and balanced customer needs with commercial goals.'
+            ]
+          },
+          {
+            id: 'accor-sales',
+            role: 'Travel Advisor',
+            company: 'Accor',
+            badge: 'Hospitality & Bookings',
+            categories: ['sales', 'phone'],
+            bullets: [
+              'Handled customer calls and digital contacts for international hotel guests, assisting with reservations, modifications, cancellations, hotel information, and customer concerns.',
+              'Helped guests identify suitable reservation options based on their needs while maintaining clear, professional communication.'
+            ]
+          },
+          {
+            id: 'stubhub-sales',
+            role: 'Customer Service Representative',
+            company: 'Alorica - StubHub',
+            badge: 'High-Volume Resolution',
+            categories: ['phone', 'outreach'],
+            bullets: [
+              'Handled high-volume customer contacts involving ticket purchases, transfers, delayed delivery, payments, refunds, cancellations, resale, and event-related issues.',
+              'Investigated account and order details, documented interactions accurately, coordinated follow-ups and escalations, and maintained ownership through resolution.'
+            ]
+          },
+          {
+            id: 'vrbo-sales',
+            role: 'Customer Service Representative',
+            company: 'Concentrix - Vrbo / Expedia Group',
+            badge: 'Partner & Guest Support',
+            categories: ['sales', 'phone'],
+            bullets: [
+              'Supported travelers and property partners with reservations, pricing, fees, policies, booking changes, cancellations, payouts, calendars, and listing-related questions.',
+              'Used CRM and support platforms to document interactions, coordinate follow-ups, and resolve complex customer and partner issues.'
+            ]
+          },
+          {
+            id: 'optimum-sales',
+            role: 'Tier 2 Technical Support',
+            company: 'Intelcia - Optimum',
+            badge: 'Phone-Based Support',
+            categories: ['phone'],
+            bullets: [
+              'Provided phone-based technical support for internet, TV, and phone services, diagnosing issues and guiding customers through structured troubleshooting.',
+              'Handled service and billing concerns, documented cases, and escalated unresolved issues with clear context.'
+            ]
+          },
+          {
+            id: 'alifbee-sales',
+            role: 'Virtual Assistant - Recruitment Outreach',
+            company: 'AlifBee Ltd',
+            badge: 'Outreach & Coordination',
+            categories: ['outreach'],
+            bullets: [
+              'Managed professional outreach and follow-ups by phone and email, coordinated meetings, and maintained an organized recruitment tracking sheet.'
+            ]
+          }
+        ],
+        skillFilters: [
+          { id: 'all', label: 'All' },
+          { id: 'sales', label: 'Sales & Calls' },
+          { id: 'crm', label: 'CRM & Tracking' }
+        ],
+        skills: [
+          { name: 'Phone Customer Service', cat: 'sales' },
+          { name: 'Consultative Sales', cat: 'sales' },
+          { name: 'Objection Handling', cat: 'sales' },
+          { name: 'Customer Follow-up', cat: 'crm' },
+          { name: 'Inbound & Outbound Communication', cat: 'sales' },
+          { name: 'Reservations & Bookings', cat: 'sales' },
+          { name: 'CRM Documentation', cat: 'crm' },
+          { name: 'Lead / Contact Tracking', cat: 'crm' },
+          { name: 'Customer Needs Discovery', cat: 'sales' },
+          { name: 'Professional Communication', cat: 'sales' },
+          { name: 'Meeting Coordination', cat: 'crm' },
+          { name: 'Escalation Handling', cat: 'crm' }
+        ],
+        tools: [
+          { name: 'Zendesk', icon: 'headphones' },
+          { name: 'Salesforce', icon: 'cloud' },
+          { name: 'Twilio', icon: 'phone-call' },
+          { name: 'CRM & Ticketing Systems', icon: 'layers' },
+          { name: 'Google Workspace', icon: 'layout-grid' },
+          { name: 'Microsoft Office', icon: 'file-text' }
+        ],
+        eduNote: 'Comfortable speaking with international and U.S. customers across inbound and outbound phone channels.',
+        contactHeading: 'Looking for a reliable caller, setter, or sales support specialist?',
+        contactDesc: 'Reach out directly via email, phone, WhatsApp, or LinkedIn for remote appointment setting, cold calling, sales support, or high-volume phone customer service roles.'
+      }
+    };
+
+    let activeTrack = 'cx';
+    let isLockedMode = false;
+    let activeExpFilter = 'all';
+    let activeSkillFilter = 'all';
+    let toastTimer = null;
+
+    function detectInitialTrack() {
+      const hash = (window.location.hash || '').toLowerCase();
+      const params = new URLSearchParams(window.location.search);
+      const qTrack = (params.get('track') || params.get('role') || '').toLowerCase();
+
+      if (hash === '#sales-only' || qTrack === 'sales') {
+        activeTrack = 'sales';
+        isLockedMode = true;
+      } else if (hash === '#cx-only' || qTrack === 'cx') {
+        activeTrack = 'cx';
+        isLockedMode = true;
+      } else if (hash === '#sales') {
+        activeTrack = 'sales';
+        isLockedMode = false;
+      } else {
+        activeTrack = 'cx';
+        isLockedMode = false;
+      }
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const msgEl = document.getElementById('toast-message');
+      if (!toast || !msgEl) return;
+      msgEl.textContent = message;
+      toast.classList.remove('opacity-0', 'translate-y-3');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-3');
+      }, 2400);
+    }
+
+    function copyText(text, successMsg) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(successMsg);
+        }).catch(() => {
+          fallbackCopy(text, successMsg);
+        });
+      } else {
+        fallbackCopy(text, successMsg);
+      }
+    }
+
+    function fallbackCopy(text, successMsg) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast(successMsg);
+      } catch (e) {
+        showToast('Could not copy automatically');
+      }
+      document.body.removeChild(ta);
+    }
+
+    function buildDedicatedUrl(trackKey) {
+      const base = (window.location.href && window.location.href.startsWith('http'))
+        ? window.location.href.split('#')[0].split('?')[0]
+        : 'https://your-site-name.netlify.app/';
+      return base + '#' + trackKey + '-only';
+    }
+
+    function updateSwitcherUI() {
+      const desktopWrap = document.getElementById('track-switcher-wrap');
+      const mobileWrap = document.getElementById('mobile-track-switcher');
+      if (isLockedMode) {
+        if (desktopWrap) desktopWrap.classList.add('!hidden');
+        if (mobileWrap) mobileWrap.classList.add('hidden');
+        return;
+      }
+      document.querySelectorAll('.track-btn').forEach(btn => {
+        const isCurrent = btn.getAttribute('data-track') === activeTrack;
+        if (isCurrent) {
+          btn.className = 'track-btn whitespace-nowrap px-2.5 py-1.5 rounded-lg transition-colors bg-white dark:bg-slate-800 text-brand-700 dark:text-brand-300 shadow-sm';
+        } else {
+          btn.className = 'track-btn whitespace-nowrap px-2.5 py-1.5 rounded-lg transition-colors text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white';
+        }
+      });
+    }
+
+    function renderProfile() {
+      const data = PROFILES[activeTrack];
+      document.title = data.pageTitle;
+
+      const navSub = document.getElementById('nav-subtitle');
+      if (navSub) navSub.textContent = data.navSubtitle;
+
+      const badgeEl = document.getElementById('hero-badge');
+      if (badgeEl) badgeEl.textContent = data.badge;
+
+      const headlineEl = document.getElementById('hero-headline');
+      if (headlineEl) {
+        headlineEl.innerHTML = data.headlineParts.join(' <span class="text-slate-300 dark:text-slate-600 mx-1">|</span> ');
+      }
+
+      const summaryEl = document.getElementById('hero-summary');
+      if (summaryEl) summaryEl.innerHTML = data.summaryHtml;
+
+      const highlightsEl = document.getElementById('highlights-grid');
+      if (highlightsEl) {
+        highlightsEl.innerHTML = data.highlights.map(h => `
+          <div class="animate-fade-in rounded-2xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60 p-4">
+            <div class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wider">${h.label}</div>
+            <div class="mt-1 text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">${h.value}</div>
+            <div class="mt-0.5 text-xs text-slate-600 dark:text-slate-300">${h.sub}</div>
+          </div>
+        `).join('');
+      }
+
+      const expTitle = document.getElementById('exp-section-title');
+      if (expTitle) expTitle.textContent = data.expTitle;
+
+      const eduNote = document.getElementById('edu-footer-note');
+      if (eduNote) eduNote.textContent = data.eduNote;
+
+      const contactHeading = document.getElementById('contact-heading');
+      if (contactHeading) contactHeading.textContent = data.contactHeading;
+
+      const contactDesc = document.getElementById('contact-desc');
+      if (contactDesc) contactDesc.textContent = data.contactDesc;
+
+      activeExpFilter = 'all';
+      activeSkillFilter = 'all';
+
+      renderExpFilters();
+      renderExperience();
+      renderSkillFilters();
+      renderSkills();
+      renderTools();
+      updateSwitcherUI();
+
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+
+    function renderExpFilters() {
+      const container = document.getElementById('exp-filters');
+      if (!container) return;
+      const filters = PROFILES[activeTrack].expFilters;
+      container.innerHTML = filters.map(f => {
+        const isActive = f.id === activeExpFilter;
+        const cls = isActive
+          ? 'exp-filter-btn px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-brand-600 text-white shadow-sm transition-colors'
+          : 'exp-filter-btn px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-400 transition-colors';
+        return `<button type="button" data-filter="${f.id}" class="${cls}">${f.label}</button>`;
+      }).join('');
+
+      container.querySelectorAll('.exp-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeExpFilter = btn.getAttribute('data-filter') || 'all';
+          renderExpFilters();
+          renderExperience();
+        });
+      });
+    }
+
+    function renderExperience() {
+      const container = document.getElementById('experience-list');
+      if (!container) return;
+      const items = PROFILES[activeTrack].experience;
+      const filtered = activeExpFilter === 'all'
+        ? items
+        : items.filter(item => item.categories.includes(activeExpFilter));
+
+      container.innerHTML = filtered.map(item => `
+        <article class="role-card animate-fade-in rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 p-5 sm:p-6 shadow-sm hover:border-brand-300 dark:hover:border-brand-700">
+          <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-3">
+            <div>
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-snug">${item.role}</h3>
+              <div class="text-sm font-semibold text-brand-700 dark:text-brand-400 mt-0.5">${item.company}</div>
+            </div>
+            <div class="flex flex-wrap items-center gap-2 shrink-0">
+              <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-brand-50 dark:bg-brand-950/70 text-brand-700 dark:text-brand-300 border border-brand-100 dark:border-brand-800/60">
+                ${item.badge}
+              </span>
+            </div>
+          </div>
+          <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            ${item.bullets.map(b => `
+              <li class="flex items-start gap-2.5">
+                <span class="mt-2 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span>
+                <span>${b}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </article>
+      `).join('');
+    }
+
+    function renderSkillFilters() {
+      const container = document.getElementById('skill-filters');
+      if (!container) return;
+      const filters = PROFILES[activeTrack].skillFilters;
+      container.innerHTML = filters.map(f => {
+        const isActive = f.id === activeSkillFilter;
+        const cls = isActive
+          ? 'skill-filter-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-brand-600 text-white transition-colors'
+          : 'skill-filter-btn px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors';
+        return `<button type="button" data-skill-cat="${f.id}" class="${cls}">${f.label}</button>`;
+      }).join('');
+
+      container.querySelectorAll('.skill-filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeSkillFilter = btn.getAttribute('data-skill-cat') || 'all';
+          renderSkillFilters();
+          renderSkills();
+        });
+      });
+    }
+
+    function renderSkills() {
+      const container = document.getElementById('skills-grid');
+      if (!container) return;
+      const items = PROFILES[activeTrack].skills;
+      const filtered = activeSkillFilter === 'all'
+        ? items
+        : items.filter(s => s.cat === activeSkillFilter);
+
+      container.innerHTML = filtered.map(skill => `
+        <span class="animate-fade-in inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium bg-slate-50 dark:bg-slate-800/70 text-slate-700 dark:text-slate-200 border border-slate-200/80 dark:border-slate-700/70">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+          ${skill.name}
+        </span>
+      `).join('');
+    }
+
+    function renderTools() {
+      const container = document.getElementById('tools-grid');
+      if (!container) return;
+      const tools = PROFILES[activeTrack].tools;
+      container.innerHTML = tools.map(tool => `
+        <div class="animate-fade-in flex items-center gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200/70 dark:border-slate-700/60">
+          <div class="w-8 h-8 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-brand-600 dark:text-brand-400 flex items-center justify-center shrink-0">
+            <i data-lucide="${tool.icon}" class="w-4 h-4"></i>
+          </div>
+          <span class="text-xs sm:text-sm font-semibold text-slate-800 dark:text-slate-100 leading-tight">${tool.name}</span>
+        </div>
+      `).join('');
+    }
+
+    function applyTheme(isDark) {
+      const root = document.documentElement;
+      const moon = document.getElementById('icon-moon');
+      const sun = document.getElementById('icon-sun');
+      if (isDark) {
+        root.classList.add('dark');
+        if (moon) moon.classList.add('hidden');
+        if (sun) sun.classList.remove('hidden');
+      } else {
+        root.classList.remove('dark');
+        if (moon) moon.classList.remove('hidden');
+        if (sun) sun.classList.add('hidden');
+      }
+      try {
+        localStorage.setItem('essam_cv_theme', isDark ? 'dark' : 'light');
+      } catch (e) {}
+    }
+
+    function initTheme() {
+      let saved = null;
+      try {
+        saved = localStorage.getItem('essam_cv_theme');
+      } catch (e) {}
+      applyTheme(saved === 'dark');
+    }
+
+    function openShareModal() {
+      const modal = document.getElementById('share-modal');
+      if (!modal) return;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeShareModal() {
+      const modal = document.getElementById('share-modal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      detectInitialTrack();
+      renderProfile();
+
+      // Track Switcher buttons
+      document.querySelectorAll('.track-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const next = btn.getAttribute('data-track');
+          if (next && PROFILES[next] && next !== activeTrack) {
+            activeTrack = next;
+            renderProfile();
+            showToast(next === 'cx' ? 'Switched to CX & Tech Support CV' : 'Switched to Sales & Appointment Setting CV');
+          }
+        });
+      });
+
+      // Theme Toggle
+      const themeBtn = document.getElementById('theme-toggle');
+      if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.contains('dark');
+          applyTheme(!isDark);
+        });
+      }
+
+      // Print buttons
+      const printBtn = document.getElementById('print-btn');
+      const mobilePrintBtn = document.getElementById('mobile-print-btn');
+      [printBtn, mobilePrintBtn].forEach(btn => {
+        if (btn) {
+          btn.addEventListener('click', () => window.print());
+        }
+      });
+
+      // Mobile Menu
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileBtn && mobileMenu) {
+        mobileBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+        mobileMenu.querySelectorAll('.mobile-nav-link').forEach(link => {
+          link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+        });
+      }
+
+      // Copy Triggers
+      document.querySelectorAll('.copy-trigger').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const val = btn.getAttribute('data-copy') || '';
+          const lbl = btn.getAttribute('data-label') || 'Copied!';
+          if (val) copyText(val, lbl);
+        });
+      });
+
+      // Share Button & Modal
+      const shareBtn = document.getElementById('share-btn');
+      if (shareBtn) {
+        shareBtn.addEventListener('click', () => {
+          if (isLockedMode) {
+            const url = window.location.href && window.location.href.startsWith('http')
+              ? window.location.href
+              : buildDedicatedUrl(activeTrack);
+            copyText(url, 'Profile link copied!');
+          } else {
+            openShareModal();
+          }
+        });
+      }
+
+      const closeShareBtn = document.getElementById('close-share-modal');
+      const shareModal = document.getElementById('share-modal');
+      if (closeShareBtn) closeShareBtn.addEventListener('click', closeShareModal);
+      if (shareModal) {
+        shareModal.addEventListener('click', (e) => {
+          if (e.target === shareModal) closeShareModal();
+        });
+      }
+
+      const copyCxBtn = document.getElementById('copy-cx-link-btn');
+      if (copyCxBtn) {
+        copyCxBtn.addEventListener('click', () => {
+          copyText(buildDedicatedUrl('cx'), 'Dedicated CX link copied! (#cx-only)');
+          closeShareModal();
+        });
+      }
+
+      const copySalesBtn = document.getElementById('copy-sales-link-btn');
+      if (copySalesBtn) {
+        copySalesBtn.addEventListener('click', () => {
+          copyText(buildDedicatedUrl('sales'), 'Dedicated Sales link copied! (#sales-only)');
+          closeShareModal();
+        });
+      }
+
+      window.addEventListener('hashchange', () => {
+        detectInitialTrack();
+        renderProfile();
+      });
+    });
+  </script>
+</body>
+</html>
